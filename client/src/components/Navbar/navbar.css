@@ -1,0 +1,18 @@
+.nav{
+    color: #000;
+    font-weight: 500;
+    font-size: 1.1rem;
+    /*background-color: rgba(0, 0, 0, 0.4);*/
+}
+
+.activ{
+    text-decoration-line: underline;
+    font-weight: 700;
+}
+
+.nav-ul > li {
+    margin-left: 3%;
+    &:hover{
+        cursor: pointer;
+    }
+}
