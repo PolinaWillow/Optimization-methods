@@ -47,6 +47,10 @@
     width: 30%;
 }
 
+.wt-100.inputParams:nth-last-child(1)>div{
+    width: 100%
+}
+
 .inputParamsText{
     width: 80%;
 }

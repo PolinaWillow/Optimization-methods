@@ -1,4 +1,4 @@
-F1 = (x)=>{return (10*x - x*x +3)}
+F1 = (x)=>{return (10*x - x*x +3)} //(3*x-Math.pow(x,3))}
 
 F2 = (x)=>{return ((2*x*x+3)/(x*x+2*x-8))}
 

@@ -7,6 +7,8 @@ const fibonacciMethod = require('../functions/FibonacciMethod')
 
 const rosenbrock = require('../functions/Rosenbrock')
 
+const barrierfunctions = require('../functions/BarrierFunctions')
+
 router.post('/optimization',[], async (req, res) => {
     console.log('Body: ' + req.body)
     try {
@@ -87,6 +89,29 @@ router.post('/multioptimization',[], async (req, res) => {
 
        
         let results = rosenbrock.Optimum(Number(eps), Number(X01), Number(X02), functId, optimum)
+        return res.status(200).json(results)
+
+    } catch (error) {
+        return res.status(error).json({message: "Неизвестная ошибка"})
+    }
+})
+
+router.post('/barrierfunctions',[], async (req, res) => {
+    console.log('Body: ' + req.body)
+    try {
+        
+        let {mu, eps, X01, X02,} = req.body
+
+        if(!mu || !eps || !X01 || !X02) return res.status(400).json({message: "Не заполнено поле обязательного параметра"})
+
+        //Преобразование к плавающей точке
+        mu = mu.toString().replace(',', '.');
+        eps = eps.toString().replace(',', '.');
+        X01 = X01.toString().replace(',', '.');
+        X02 = X02.toString().replace(',', '.');
+
+       
+        let results = barrierfunctions.Optimum(Number(mu), Number(eps), Number(X01), Number(X02))
         return res.status(200).json(results)
 
     } catch (error) {

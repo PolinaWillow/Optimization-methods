@@ -83,8 +83,8 @@ export const OneDimensionalOptimization = (props) =>{
                         <lable className="block">Функция F(X):</lable>
                         <select name="funct" id="functions-select" onChange={changeHandler} onBlur={addNewValue}>
                             <option value="">Выбирите функцию</option>
-                            <option value="F1">10*x - x*x +3</option>
-                            <option value="F2">(2*x*x+3)/(x*x+2*x-8)</option>
+                            <option value="F1"><p>10x - x<sup>2</sup> +3</p></option>
+                            <option value="F2">(2x<sup>2</sup>+3)/(x<sup>2</sup>+2x-8)</option>
                         </select>
                     </div>
                 </div>

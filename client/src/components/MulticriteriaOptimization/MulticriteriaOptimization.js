@@ -96,18 +96,18 @@ export const MulticriteriaOptimization = ()=>{
                         <div className="inputParams flex justify-space-between">
                            
                             <div>
-                                <lable className="block">Точность вычислений eps:</lable>
+                                <lable className="block">Точность вычислений &epsilon;:</lable>
                                 <input className="inputParamsText" autoComplete="off" type="text" name="eps" id="eps" onChange={changeHandler} onBlur={addNewValue}/>
                             </div>
 
                             <div>
-                                <lable>Начальная точка X0:</lable>
+                                <lable>Начальная точка X<sub>0</sub>:</lable>
                                 <div className="mg-top-1">
-                                    <lable>X01:</lable>
+                                    <lable>X<sub>01</sub>:</lable>
                                     <input className="inputParamsText" autoComplete="off"  type="text" name="X01" id="X01" onChange={changeHandler} onBlur={addNewValue}/>
                                 </div>
                                 <div className="mg-top-1">
-                                    <lable>X02:</lable>
+                                    <lable>X<sub>02</sub>:</lable>
                                     <input className="inputParamsText" autoComplete="off" type="text" name="X02" id="X02" onChange={changeHandler} onBlur={addNewValue}/>
                                 </div>
                             </div>
